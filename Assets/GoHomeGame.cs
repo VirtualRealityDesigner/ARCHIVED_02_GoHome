@@ -14,6 +14,22 @@ public class GoHomeGame : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-	
-	}
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            print("down arrow was pressed");
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            print("up arrow was pressed");
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            print("left arrow was pressed");
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            print("right arrow was pressed");
+        }
+
+    }
 }
