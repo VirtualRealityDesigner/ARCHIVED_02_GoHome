@@ -5,30 +5,30 @@ public class GoHomeGame : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        int numberOfSteps = 10;
-        float distance = 0.0f;
         print("Welcome to Go Home!");
         print("A game where you need to find you way home.");
-        print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
     }
 
     // Update is called once per frame
     void Update () {
+        int numberOfSteps = 10;
+        float distance = 0.0f;
+
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            print("down arrow was pressed");
+            print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            print("up arrow was pressed");
+            print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            print("left arrow was pressed");
+            print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            print("right arrow was pressed");
+            print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
         }
 
     }
