@@ -7,36 +7,43 @@ public class GoHomeGame : MonoBehaviour {
     float distance = 5.0f;
 
     // Use this for initialization
-    void Start () {
+    void Start() {
+        PrintWelcomeMessage();
+    }
+
+    void PrintWelcomeMessage()
+    {
         print("Welcome to Go Home!");
         print("A game where you need to find you way home.");
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update() {
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
-            numberOfSteps++;
+            PrintUpdateAndContinue();
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
-            numberOfSteps++;
+            PrintUpdateAndContinue();
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             distance--;
-            print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
-            numberOfSteps++;
+            PrintUpdateAndContinue();
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             distance++;
-            print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
-            numberOfSteps++;
+            PrintUpdateAndContinue();
         }
 
+    }
+
+    void PrintUpdateAndContinue()
+    {
+        print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
+        numberOfSteps++;
     }
 }
