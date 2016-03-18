@@ -47,7 +47,14 @@ public class GoHomeGame : MonoBehaviour {
     void PrintUpdateAndContinue()
     {
         Vector2 distance = homeLocation - playerLocation;
-        print("After " + numberOfSteps + " steps, you are " + distance + " meters away from home.");
-        numberOfSteps++;
+        bool gameOver = distance.magnitude == 0;
+        if (gameOver)
+        {
+            print("Game over in " + numberOfSteps + " steps.");
+        } else
+        {
+            print("After " + numberOfSteps + " steps, you are " + distance.magnitude + " meters away from home.");
+            numberOfSteps++;
+        }
     }
 }
