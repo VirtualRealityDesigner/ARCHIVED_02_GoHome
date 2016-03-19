@@ -6,6 +6,7 @@ public class GoHomeGame : MonoBehaviour {
     int numberOfSteps = 1;
     Vector2 homeLocation = new Vector2(2.0f, 3.0f);
     Vector2 playerLocation = new Vector2(5.0f, 1.0f);
+    bool gameOver = false;
 
     // Use this for initialization
     void Start() {
@@ -20,6 +21,11 @@ public class GoHomeGame : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        if (gameOver)
+        {
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -47,7 +53,7 @@ public class GoHomeGame : MonoBehaviour {
     void PrintUpdateAndContinue()
     {
         Vector2 distance = homeLocation - playerLocation;
-        bool gameOver = distance.magnitude == 0;
+        gameOver = distance.magnitude == 0;
         if (gameOver)
         {
             print("Game over in " + numberOfSteps + " steps.");
